@@ -1,0 +1,326 @@
+:root {
+  /* Paleta Lúdica: Verde Suave, Amarelo Claro e Azul */
+  --bg: #eafaea; /* Fundo Verde Menta Suave */
+  --card: #ffffff; /* Fundo do Card Branco Puro */
+  --accent: #4CAF50; /* Verde Vibrante Principal (Natureza) */
+  --accent-hover: #388E3C; /* Verde Escuro no Hover */
+  --text: #333333; /* Texto Escuro Quase Preto */
+  --border: #B2DFDB; /* Borda Turquesa Clara */
+  --shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Sombra mais visível */
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.20); /* Sombra mais forte */
+  --font-size-base: 18px; /* Fonte base maior */
+}
+
+/* Base e Tipografia */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fonte amigável */
+  background: var(--bg);
+  color: var(--text);
+  padding: 40px 18px; 
+  line-height: 1.5;
+  font-size: var(--font-size-base);
+}
+
+/* Topo (Cabeçalho) */
+.topo {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.logo {
+  width: 50px; /* Logo maior */
+  height: 50px;
+  border-radius: 50%;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 24px; /* Título maior */
+  color: var(--accent);
+  font-weight: 900;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Telas */
+.tela {
+  width: 100%;
+  max-width: 960px; 
+  display: block;
+  margin-top: 80px; /* Espaço para cabeçalho maior */
+}
+
+.inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  color: var(--accent);
+  font-size: 2.5em; /* Títulos grandes */
+  font-weight: 700;
+}
+
+.lead {
+  margin-bottom: 40px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Opções Grandes (Botões da Tela Inicial) */
+.opcoes-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha no topo */
+  gap: 30px; 
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.opcao {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 25px; /* Mais arredondado */
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+  user-select: none;
+  min-height: 250px; 
+}
+
+.opcao img {
+  width: 130px; /* Imagens menores para focar no nome */
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent);
+  margin-bottom: 15px;
+}
+
+.opcao span {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.8px;
+  font-size: 1.3em; /* Texto da opção maior */
+}
+
+.opcao:active,
+.opcao:hover {
+  transform: scale(1.05); /* Efeito mais lúdico */
+  box-shadow: var(--shadow-hover);
+}
+
+/* Tela de Mistura (Card) */
+.mistura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 30px; /* Muito arredondado */
+  box-shadow: var(--shadow-hover);
+  width: 100%;
+  max-width: 800px;
+}
+
+.card h2 {
+  font-size: 2em;
+  border-bottom: 3px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.instrucoes {
+  margin: 0 0 25px 0;
+  color: #444;
+  font-style: normal;
+  font-weight: 600; /* Mais fácil de ler */
+  font-size: 1.1em;
+}
+
+/* Formulário e Inputs */
+.form-row {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--text);
+}
+
+select, input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: #fdfdfd;
+  font-size: 1.1em;
+  transition: border-color 0.2s;
+}
+
+select:focus, input[type="text"]:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.3);
+}
+
+/* Campos Personalizados (para 'Aa') */
+.custom-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.custom-input-group input {
+    flex: 1;
+}
+
+.custom-input-group .alelo-input {
+    flex: 0 0 80px; /* Tamanho fixo para o alelo */
+    text-align: center;
+}
+
+/* Botoes */
+.botoes {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.sec {
+  background: #FFC107; /* Amarelo Lúdico */
+  color: var(--text);
+}
+button.sec:hover {
+    background: #FFA000;
+}
+
+button.voltar {
+  background: #90A4AE; /* Azul Acinzentado */
+  color: #fff;
+}
+button.voltar:hover {
+    background: #607D8B;
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 35px;
+  padding: 25px;
+  background: #f8fff8; /* Fundo muito claro */
+  border-radius: 15px;
+  border: 2px dashed var(--accent); /* Borda divertida */
+}
+
+.resultado p {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--text);
+}
+
+.resultado strong {
+    color: #16892f; /* Laranja para destaque */
+}
+
+/* --- ESTILOS DO QUADRADO DE PUNNETT --- */
+.punnett-square {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 300px; /* Punnett maior */
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+.punnett-square th, .punnett-square td {
+    border: 3px solid var(--accent);
+    padding: 12px;
+    text-align: center;
+    font-size: 1.5em; /* Alelos grandes */
+    font-weight: 800;
+    line-height: 1;
+}
+.punnett-square th {
+    background-color: var(--accent);
+    color: white;
+}
+.punnett-square tr:nth-child(even) td,
+.punnett-square tr:nth-child(odd) td {
+    background-color: #E8F5E9; /* Cor clara */
+}
+.punnett-square tr:nth-child(2) th,
+.punnett-square tr:nth-child(3) th {
+    background-color: #A5D6A7; /* Cor do alelo do pai */
+    color: var(--text);
+}
+.punnett-square tr:first-child th:first-child {
+    background-color: #f8fff8 !important; 
+    border: 3px solid var(--accent);
+}
+/* --- FIM ESTILOS PUNNETT --- */
+
+/* Utilitário */
+.oculto {
+  display: none !important;
+}

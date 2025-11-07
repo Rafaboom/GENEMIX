@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misturador Genético</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="topo">
+        <img src="img/resolução.png" alt="Logo" class="logo"> 
+        <h1>Misturador Genético</h1>
+    </header>
+
+    <section id="tela-inicial" class="tela inicial">
+        <h2>Simulador de Herança Genética</h2>
+        <p class="lead">Escolha um traço genético para simular o cruzamento entre os pais e as gerações futuras.</p>
+        
+        <div class="opcoes-container">
+            
+            <div class="opcao" id="btnOlhos">
+                <img src="img/olho.png" alt="Olhos"> 
+                <span>Olhos</span>
+            </div>
+
+            <div class="opcao" id="btnPele">
+                <img src="img/pele.png" alt="Pele"> 
+                <span>Pele</span>
+            </div>
+
+            <div class="opcao" id="btnCabelo">
+                <img src="img/cabelo.png" alt="Cabelo"> 
+                <span>Cabelo</span>
+            </div>
+            
+            <div class="opcao" id="btnAa">
+                <img src="img/aa.png" alt="Personalizado Aa"> 
+                <span>Aa</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="tela-mistura" class="tela mistura oculto">
+        <div class="card">
+            <h2 id="tituloCategoria">CATEGORIA</h2>
+            <p id="instrucoes" class="instrucoes">Instruções...</p>
+
+            <div id="formRowSelect" class="form-row">
+                <div class="form-group">
+                    <label for="selectMae">Mãe</label>
+                    <select id="selectMae"></select>
+                </div>
+                <div class="form-group">
+                    <label for="selectPai">Pai</label>
+                    <select id="selectPai"></select>
+                </div>
+            </div>
+
+            <div id="formRowCustom" class="form-row oculto">
+                </div>
+
+            <div class="botoes">
+                <button id="misturarBtn"> Misturar</button>
+                <button id="resetarBtn" class="sec">Limpar</button>
+                <button id="voltarBtn" class="voltar">Voltar</button>
+            </div>
+
+            <div id="resultado" class="resultado">
+                </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script> 
+</body>
+</html>
